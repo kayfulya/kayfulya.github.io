@@ -5,259 +5,228 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Перебивки для тизера «Tether» — Данил</title>
 <style>
-  :root {
-    --bg: #fafaf7;
-    --text: #1c1c1c;
-    --muted: #888;
-    --accent: #c7510f;
-    --card: #fff;
-    --border: #e5e0d8;
-    --tag-bg: #f4efe8;
-    --link: #1c1c1c;
-  }
+  :root { --bg:#fafaf7; --text:#1c1c1c; --muted:#888; --accent:#c7510f; --card:#fff; --border:#e5e0d8; --tag-bg:#f4efe8; --link:#1c1c1c; }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body {
-    font-family: Georgia, 'Times New Roman', serif;
-    background: var(--bg);
-    color: var(--text);
-    padding: 40px 20px;
-    max-width: 720px;
-    margin: 0 auto;
-    line-height: 1.65;
-  }
-  h1 {
-    font-size: 26px;
-    font-weight: normal;
-    font-style: italic;
-    margin-bottom: 6px;
-  }
-  .subtitle {
-    color: var(--muted);
-    font-size: 15px;
-    margin-bottom: 36px;
-  }
-  .scene {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 22px 24px;
-    margin-bottom: 18px;
-  }
-  .scene-num {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    margin-bottom: 6px;
-  }
-  .quote {
-    font-style: italic;
-    font-size: 16px;
-    margin-bottom: 14px;
-    padding-left: 12px;
-    border-left: 2px solid var(--accent);
-  }
-  .link-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 8px;
-    font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  }
-  .link-row:last-child { margin-bottom: 0; }
-  .tag {
-    display: inline-block;
-    background: var(--tag-bg);
-    padding: 1px 8px;
-    border-radius: 4px;
-    font-size: 11px;
-    letter-spacing: 0.03em;
-    white-space: nowrap;
-    margin-right: 4px;
-  }
-  a {
-    color: var(--link);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: #ccc;
-  }
-  a:hover { text-decoration-color: var(--accent); }
-  .what {
-    color: var(--muted);
-    font-size: 13px;
-  }
-  hr {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 36px 0 28px;
-  }
-  .main-video {
-    background: #fef9f5;
-    border: 1px solid var(--accent);
-    border-radius: 8px;
-    padding: 22px 24px;
-    margin-bottom: 28px;
-  }
-  .main-video .label {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    margin-bottom: 4px;
-  }
-  .main-video h2 {
-    font-weight: normal;
-    font-style: italic;
-    font-size: 18px;
-    margin-bottom: 4px;
-  }
-  .main-video .dur {
-    color: var(--muted);
-    font-size: 14px;
-    margin-bottom: 12px;
-  }
-  .note {
-    font-size: 13px;
-    color: var(--muted);
-    background: #fffdf7;
-    border: 1px solid #e8e2d4;
-    border-radius: 6px;
-    padding: 14px 18px;
-    margin-top: 20px;
-  }
+  body { font-family:Georgia,'Times New Roman',serif; background:var(--bg); color:var(--text); padding:40px 20px; max-width:760px; margin:0 auto; line-height:1.65; }
+  h1 { font-size:26px; font-weight:normal; font-style:italic; margin-bottom:6px; }
+  .subtitle { color:var(--muted); font-size:15px; margin-bottom:36px; }
+  .section { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:22px 24px; margin-bottom:18px; }
+  .section.hero { border-color:var(--accent); background:#fef9f5; }
+  .label { font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent); margin-bottom:4px; }
+  h2 { font-weight:normal; font-style:italic; font-size:18px; margin-bottom:4px; }
+  .dur { color:var(--muted); font-size:13px; margin-bottom:10px; }
+  .yt-link { font-size:14px; margin-bottom:8px; }
+  .yt-link a { color:var(--link); text-underline-offset:3px; }
+  .yt-link a:hover { text-decoration-color:var(--accent); }
+  .cut { background:#fdfdfb; border:1px solid #e5e0d8; border-radius:6px; padding:12px 16px; margin-bottom:10px; font-size:13px; }
+  .cut:last-child { margin-bottom:0; }
+  .cut .time { font-family:SF Mono,Menlo,monospace; font-weight:600; color:var(--accent); }
+  .cut .desc { color:var(--text); margin-top:3px; }
+  .cut .why { color:var(--muted); font-size:12px; margin-top:2px; }
+  a { color:var(--link); text-underline-offset:3px; }
+  a:hover { text-decoration-color:var(--accent); }
+  .note { font-size:13px; color:var(--muted); background:#fffdf7; border:1px solid #e8e2d4; border-radius:6px; padding:14px 18px; margin-top:24px; }
 </style>
 </head>
 <body>
 
 <h1>Tether — перебивки для тизера</h1>
-<p class="subtitle">Данил-адвокат · 7 видео · проверено 5 июня</p>
+<p class="subtitle">Данил-адвокат · 7 видео · по секундам что брать · проверено 5 июня</p>
 
-<!-- ГЛАВНОЕ ВИДЕО -->
-<div class="main-video">
-  <div class="label">🎯 Основа всего тизера</div>
+<!-- ВИДЕО 1 -->
+<div class="section hero">
+  <div class="label">Видео 1 · основа 80% тизера</div>
   <h2>Stability and Freedom in Chaos: The Story of Tether USD₮</h2>
-  <div class="dur">53 минуты · официальный докфильм Tether</div>
-  <p style="margin-top:10px;font-size:14px;">
+  <div class="dur">53 мин · официальный докфильм Tether</div>
+  <div class="yt-link">
     <a href="https://www.youtube.com/watch?v=ZPaY3kdhVTw" target="_blank">Открыть на YouTube</a>
-    &nbsp;·&nbsp;
-    <span class="tag">скачай целиком</span>
-  </p>
-  <p style="margin-top:10px;font-size:13px;color:var(--muted);">
-    Внутри: люди на рынках Аргентины и Турции, уличные расчёты в USDT, фавелы Бразилии, графика «как работает стейблкоин», интервью CEO Паоло Ардоино, управление резервами. Хронометраж глав ниже.
-  </p>
-  <details style="margin-top:12px;font-size:13px;">
-    <summary style="cursor:pointer;color:var(--accent);">Главы фильма (кликабельные таймкоды)</summary>
-    <div style="margin-top:8px;display:flex;flex-direction:column;gap:3px;">
-      <a href="https://www.youtube.com/watch?v=ZPaY3kdhVTw&t=0" target="_blank">0:00 — Intro</a>
-      <a href="https://www.youtube.com/watch?v=ZPaY3kdhVTw&t=169" target="_blank">2:49 — Инфляция в Аргентине (люди, рынки, песо)</a>
-      <a href="https://www.youtube.com/watch?v=ZPaY3kdhVTw&t=519" target="_blank">8:39 — Инфляция в Турции (Гранд-базар, расчёты)</a>
-      <a href="https://www.youtube.com/watch?v=ZPaY3kdhVTw&t=829" target="_blank">13:49 — Рождение USDT (как работает стейблкоин)</a>
-      <a href="https://www.youtube.com/watch?v=ZPaY3kdhVTw&t=2151" target="_blank">35:51 — Бразилия (фавелы, торговля, USDT)</a>
-      <a href="https://www.youtube.com/watch?v=ZPaY3kdhVTw&t=2554" target="_blank">42:34 — Управление резервами (облигации США)</a>
-    </div>
-  </details>
-</div>
+    &nbsp;·&nbsp;<span style="font-size:11px;background:var(--tag-bg);padding:1px 8px;border-radius:4px;">скачай целиком</span>
+  </div>
 
-<!-- СЦЕНА 1 -->
-<div class="scene">
-  <div class="scene-num">Сцена 1</div>
-  <div class="quote">«В компании 150 сотрудников. Чистая прибыль — 13 миллиардов долларов»</div>
-  <div class="link-row">
-    <span class="tag">основной</span>
-    <span><a href="https://www.youtube.com/watch?v=wno4M795W3Y&t=0" target="_blank">Bloomberg: Tether CEO Paolo Ardoino</a><br>
-    <span class="what">0:00–1:30 — гендиректор в студии Bloomberg, графика, цифры. Идеально под «серьёзную компанию».</span></span>
+  <div class="cut">
+    <div class="time">🔪 0:00–0:21</div>
+    <div class="desc">Чёрный экран → логотип Tether. Глобальная карта, дрон-пролёты над городами. Продакшн-графика.</div>
+    <div class="why">→ «Представь компанию. Знакомься — Tether.»</div>
   </div>
-  <div class="link-row">
-    <span class="tag">запасной</span>
-    <span><a href="https://www.youtube.com/watch?v=ZPaY3kdhVTw&t=0" target="_blank">Докфильм Tether — Intro</a><br>
-    <span class="what">0:00–2:49 — логотип, глобальная карта, продакшн-графика. Можно перекрыть цифрами.</span></span>
-  </div>
-</div>
 
-<!-- СЦЕНА 2 -->
-<div class="scene">
-  <div class="scene-num">Сцена 2</div>
-  <div class="quote">«Ты даёшь им 100 долларов — они выдают тебе 100 цифровых. А твою сотню кладут в облигации США»</div>
-  <div class="link-row">
-    <span class="tag">основной</span>
-    <span><a href="https://www.youtube.com/watch?v=ZPaY3kdhVTw&t=829" target="_blank">Докфильм Tether — глава «Рождение USDT»</a><br>
-    <span class="what">13:49–18:11 — визуализация механики стейблкоина, как доллар превращается в цифровой.</span></span>
+  <div class="cut">
+    <div class="time">🔪 2:51–5:50</div>
+    <div class="desc">Буэнос-Айрес. Уличные рынки, прилавки с мясом и овощами, очереди. Женщина: «всю жизнь работала, не могла накопить». Крупные планы — руки считают песо, купюры, продукты.</div>
+    <div class="why">→ «Полмиллиарда человек по всему миру носят им деньги.» Живые люди, не постановка.</div>
   </div>
-  <div class="link-row">
-    <span class="tag">облигации</span>
-    <span><a href="https://www.youtube.com/watch?v=UGnVPa66HdM" target="_blank">US Treasury Department, Washington DC</a><br>
-    <span class="what">0:00–1:03 — здание Казначейства США, флаг, фасад. Символ «ваши деньги в облигациях США».</span></span>
-  </div>
-</div>
 
-<!-- СЦЕНА 3 -->
-<div class="scene">
-  <div class="scene-num">Сцена 3</div>
-  <div class="quote">«Полмиллиарда человек по всему миру носят им деньги»</div>
-  <div class="link-row">
-    <span class="tag">основной</span>
-    <span><a href="https://www.youtube.com/watch?v=ZPaY3kdhVTw&t=169" target="_blank">Докфильм Tether — Аргентина</a><br>
-    <span class="what">2:49–8:39 — уличные рынки, обычные люди, песо обесценивается. Живая съёмка.</span></span>
+  <div class="cut">
+    <div class="time">🔪 5:50–8:00</div>
+    <div class="desc">Венесуэлка про гиперинфляцию 5000–6000%. Интервью на улице. Хозяйка магазина переписывает ценники каждую неделю — крупный план ценников.</div>
+    <div class="why">→ Продолжение: люди бегут от инфляции в доллар. Монтажно — быстрая смена стран.</div>
   </div>
-  <div class="link-row">
-    <span class="tag">основной</span>
-    <span><a href="https://www.youtube.com/watch?v=ZPaY3kdhVTw&t=519" target="_blank">Докфильм Tether — Турция</a><br>
-    <span class="what">8:39–11:59 — Гранд-базар Стамбула, люди с телефонами, платят в USDT.</span></span>
+
+  <div class="cut">
+    <div class="time">🔪 8:39–10:20</div>
+    <div class="desc">Стамбул, Гранд-базар. «Лахмаджун был 5 лир, теперь 100.» Мужчина у прилавка: «здесь дешевле чем в супермаркете.» Специи, сыры, покупатели.</div>
+    <div class="why">→ Ещё один континент. «Люди по всему миру» — вот Турция.</div>
+  </div>
+
+  <div class="cut">
+    <div class="time">🔪 13:49–14:40</div>
+    <div class="desc">«A stablecoin is a new innovative form of digital money.» Графика: доллар → цифровой токен на экране телефона. «This is a digital dollar in your hands.»</div>
+    <div class="why">→ «Ты даёшь им 100 долларов — они выдают тебе 100 цифровых.»</div>
+  </div>
+
+  <div class="cut">
+    <div class="time">🔪 27:15–30:55</div>
+    <div class="desc">Mercado Central, Буэнос-Айрес, 4 утра. Продавцы раскладывают товар. «Если платят песо — сразу меняю на доллары чтобы не обесценились.» Кадры телефонов, QR-кодов, перевод USDT.</div>
+    <div class="why">→ Реальные люди реально спасают деньги через USDT. Эмоция + факт.</div>
+  </div>
+
+  <div class="cut">
+    <div class="time">🔪 35:51–38:30</div>
+    <div class="desc">Бразилия, Сан-Паулу. 90% крипто-транзакций Бразилии — USDT. Женщина в фавеле: «у меня нет банковского счета, а через это приложение я могу покупать.» Телефон с кошельком крупным планом.</div>
+    <div class="why">→ «Ничего не производит, а полмиллиарда человек несут им деньги.»</div>
+  </div>
+
+  <div class="cut">
+    <div class="time">🔪 42:34–44:00</div>
+    <div class="desc">«Reserve Management.» CEO Паоло Ардоино про резервы и обеспечение USDT. Позади — графики с цифрами.</div>
+    <div class="why">→ Фоном под «А твою сотню кладут в облигации США. Проценты забирают себе.»</div>
   </div>
 </div>
 
-<!-- СЦЕНА 4 -->
-<div class="scene">
-  <div class="scene-num">Сцена 4</div>
-  <div class="quote">«Если бы Tether сидел в США — отдал бы 2,7 млрд. Если бы в России — 3,25 млрд. А он отдаёт — ноль»</div>
-  <div class="link-row">
-    <span class="tag">США</span>
-    <span><a href="https://www.youtube.com/watch?v=RtsWRH6lJTI" target="_blank">IRS Building, Washington DC</a><br>
-    <span class="what">0:00–0:18 — здание налоговой службы США. В кадре: «вот куда ушли бы 2,7 млрд».</span></span>
+<!-- ВИДЕО 2 -->
+<div class="section">
+  <div class="label">Видео 2</div>
+  <h2>Bloomberg Talks — Tether CEO Paolo Ardoino</h2>
+  <div class="dur">10:49 &nbsp;·&nbsp; <a href="https://www.youtube.com/watch?v=wno4M795W3Y" target="_blank">Открыть на YouTube</a></div>
+
+  <div class="cut">
+    <div class="time">🔪 0:00–0:12</div>
+    <div class="desc">Заставка Bloomberg, логотип, название программы. Графика «Bloomberg Talks».</div>
+    <div class="why">→ Открытие тизера. Серьёзный канал = серьёзная компания.</div>
   </div>
-  <div class="link-row">
-    <span class="tag">Россия</span>
-    <span class="what">❌ Здание ФНС — нет оперативных кадров хорошего качества.<br>
-    💡 Вместо этого: чёрный экран + крупно «3,25 млрд ₽» белым шрифтом. Работает сильнее.</span>
+
+  <div class="cut">
+    <div class="time">🔪 0:12–1:45</div>
+    <div class="desc">Паоло Ардоино в студии крупным планом. Студийный свет, микрофон Bloomberg. Говорит про масштаб бизнеса. Ведущая задаёт вопросы. Позади — экран с графикой.</div>
+    <div class="why">→ «В компании 150 сотрудников. Чистая прибыль — 13 миллиардов.»</div>
+  </div>
+
+  <div class="cut">
+    <div class="time">🔪 2:30–3:20</div>
+    <div class="desc">Обсуждение прибыли и резервов. Ведущая кивает, цифры на экране.</div>
+    <div class="why">→ Запасной кусок если первый не влезает по ритму.</div>
   </div>
 </div>
 
-<!-- СЦЕНА 5 -->
-<div class="scene">
-  <div class="scene-num">Сцена 5</div>
-  <div class="quote">«В январе 2025 они переехали в Сальвадор. Страну, которая первой в мире сделала биткоин официальной валютой»</div>
-  <div class="link-row">
-    <span class="tag">основной</span>
-    <span><a href="https://www.youtube.com/watch?v=EcwY4Ue9blI&t=0" target="_blank">El Salvador makes Bitcoin legal tender</a><br>
-    <span class="what">0:00–2:25 — новостной сюжет, флаг Сальвадора, парламент голосует. Исторический момент.</span></span>
+<!-- ВИДЕО 3 -->
+<div class="section">
+  <div class="label">Видео 3</div>
+  <h2>US Treasury Department — здание Казначейства США</h2>
+  <div class="dur">1:03 &nbsp;·&nbsp; <a href="https://www.youtube.com/watch?v=UGnVPa66HdM" target="_blank">Открыть на YouTube</a></div>
+
+  <div class="cut">
+    <div class="time">🔪 0:00–0:12</div>
+    <div class="desc">Фасад здания Казначейства США. Колонны, флаг, широкий план.</div>
+    <div class="why">→ Наезд камерой + текст «$2,7 млрд налогов» — сразу понятно куда ушли бы деньги.</div>
   </div>
-  <div class="link-row">
-    <span class="tag">улицы</span>
-    <span><a href="https://www.youtube.com/watch?v=byWGTddl5Fk&t=0" target="_blank">Inside El Salvador's Bitcoin Experiment</a><br>
-    <span class="what">0:00–3:00 — Bitcoin Beach, люди платят биткоином за кофе. Живая съёмка, не постановка.</span></span>
+
+  <div class="cut">
+    <div class="time">🔪 0:12–0:35</div>
+    <div class="desc">Более близкий план — вывеска «Treasury Department», флаг на ветру.</div>
+    <div class="why">→ Если нужен чуть длиннее план.</div>
   </div>
 </div>
 
-<!-- СЦЕНА 6 -->
-<div class="scene">
-  <div class="scene-num">Сцена 6</div>
-  <div class="quote">«Там компании с крипто-лицензией платят с цифровых активов — ноль процентов»</div>
-  <div class="link-row">
-    <span class="tag">основной</span>
-    <span><a href="https://www.youtube.com/watch?v=-Hl8s1qqNUA&t=0" target="_blank">El Salvador Grants First Digital Asset License</a><br>
-    <span class="what">0:00–1:28 — новостная графика, лого Сальвадора, «Digital Asset License». Пруф налогового рая.</span></span>
+<!-- ВИДЕО 4 -->
+<div class="section">
+  <div class="label">Видео 4</div>
+  <h2>IRS Building — налоговая служба США</h2>
+  <div class="dur">0:18 &nbsp;·&nbsp; <a href="https://www.youtube.com/watch?v=RtsWRH6lJTI" target="_blank">Открыть на YouTube</a></div>
+
+  <div class="cut">
+    <div class="time">🔪 0:00–0:18 (всё видео)</div>
+    <div class="desc">Здание IRS, Вашингтон. Серое административное здание, вывеска Internal Revenue Service.</div>
+    <div class="why">→ Сразу после Казначейства — «а отдаёт он — ноль.»</div>
+  </div>
+</div>
+
+<!-- ВИДЕО 5 -->
+<div class="section">
+  <div class="label">Видео 5</div>
+  <h2>El Salvador makes Bitcoin legal tender</h2>
+  <div class="dur">2:25 &nbsp;·&nbsp; <a href="https://www.youtube.com/watch?v=EcwY4Ue9blI" target="_blank">Открыть на YouTube</a></div>
+
+  <div class="cut">
+    <div class="time">🔪 0:00–0:10</div>
+    <div class="desc">Флаг Сальвадора развевается. Заголовок новости: «El Salvador makes Bitcoin legal tender.»</div>
+    <div class="why">→ Мгновенно читается: Сальвадор + биткоин.</div>
+  </div>
+
+  <div class="cut">
+    <div class="time">🔪 0:10–0:35</div>
+    <div class="desc">Парламент Сальвадора голосует. Депутаты поднимают руки. Зал заседаний.</div>
+    <div class="why">→ Исторический кадр — первая в мире страна проголосовала за биткоин.</div>
+  </div>
+
+  <div class="cut">
+    <div class="time">🔪 0:35–1:10</div>
+    <div class="desc">Люди на улицах Сан-Сальвадора. Вывески «Bitcoin accepted here.» Чиво-банкоматы.</div>
+    <div class="why">→ «Страна, которая первой в мире сделала биткоин официальной валютой.»</div>
+  </div>
+</div>
+
+<!-- ВИДЕО 6 -->
+<div class="section">
+  <div class="label">Видео 6</div>
+  <h2>Inside El Salvador's Bitcoin Experiment (Coinage)</h2>
+  <div class="dur">10:15 &nbsp;·&nbsp; <a href="https://www.youtube.com/watch?v=byWGTddl5Fk" target="_blank">Открыть на YouTube</a></div>
+
+  <div class="cut">
+    <div class="time">🔪 0:00–0:45</div>
+    <div class="desc">Bitcoin Beach (El Zonte). Пальмы, океан, сёрферы. Вывеска «Bitcoin Beach.» Местные жители.</div>
+    <div class="why">→ Красивые кадры Сальвадора — солнце, море, крипта.</div>
+  </div>
+
+  <div class="cut">
+    <div class="time">🔪 1:30–2:30</div>
+    <div class="desc">Женщина продаёт свечи на рынке — платят биткоином. Люди в кафе расплачиваются телефоном. Продавец показывает QR-код.</div>
+    <div class="why">→ Живая съёмка: реальные люди реально платят биткоином за кофе и хлеб.</div>
+  </div>
+
+  <div class="cut">
+    <div class="time">🔪 3:40–4:40</div>
+    <div class="desc">Аптека «Blink» (Lightning-кошелёк). Ветклиника Chivo Pets — с биткоином дешевле на 75%.</div>
+    <div class="why">→ Бытовое, повседневное использование биткоина. Не абстракция.</div>
+  </div>
+</div>
+
+<!-- ВИДЕО 7 -->
+<div class="section">
+  <div class="label">Видео 7</div>
+  <h2>El Salvador Grants First Digital Asset License</h2>
+  <div class="dur">1:28 &nbsp;·&nbsp; <a href="https://www.youtube.com/watch?v=-Hl8s1qqNUA" target="_blank">Открыть на YouTube</a></div>
+
+  <div class="cut">
+    <div class="time">🔪 0:00–0:20</div>
+    <div class="desc">Новостная заставка. Логотип Сальвадора на документе «Digital Asset Service Provider License.»</div>
+    <div class="why">→ Пруф: официальный документ, лицензия = налоговый рай.</div>
+  </div>
+
+  <div class="cut">
+    <div class="time">🔪 0:25–0:55</div>
+    <div class="desc">Графика с текстом «tax advantages», «zero percent», флаг Сальвадора.</div>
+    <div class="why">→ «Там компании с крипто-лицензией платят — ноль процентов.»</div>
   </div>
 </div>
 
 <div class="note">
-  <strong>📋 Порядок работы монтажёрке:</strong><br>
-  1. Скачать докфильм Tether (53 мин) — это 80% всего материала.<br>
-  2. Нарезать по главам согласно таймкодам выше.<br>
-  3. Поверх докфильма добавить: Bloomberg-интервью CEO, сальвадорские новости, здания IRS и Treasury.<br>
+  <strong>📋 Порядок работы:</strong><br>
+  1. Скачать все 7 видео по ссылкам выше.<br>
+  2. Нарезать каждый кусок точно по таймкодам 🔪 → сложить в папку <code>tether-cuts/</code>.<br>
+  3. Собрать на таймлайне: докфильм как основа, Bloomberg поверх, Сальвадор в концовку.<br>
   4. Цифры (13 млрд, 2,7 млрд, 3,25 млрд, 0) — графика, не видео.<br>
-  5. Disney+McDonalds — не искать видео, сделать графику (столбики).<br>
-  6. Финал: чёрный экран → три строки одна за другой: «150 человек. 13 миллиардов. Ноль налогов.»
+  5. Disney + McDonalds — графика: два столбика + третий выше = Tether.<br>
+  6. Финал: чёрный экран → три строки одна за другой:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>150 человек. 13 миллиардов. Ноль налогов.</strong>
 </div>
 
 </body>
